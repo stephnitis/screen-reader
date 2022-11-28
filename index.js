@@ -18,7 +18,7 @@ function createFocusList(){
 }
 
 function moveFocus(offset){
-  [...]
+  // [...]
   focusIndex = focusIndex + offset;
 
   if(focusIndex < 0 ){
@@ -28,4 +28,26 @@ function moveFocus(offset){
   }
 
   focus(focusList[focusIndex]);
+}
+
+function moveFocus(offset){
+  // [...]
+  if(offset instanceof HTMLElement){
+    focusIndex = focusList.findIndex((element) => {
+      return element === offset;
+    });
+    return focus(offset);
+  }
+  // [...]
+}
+
+function focus(element) {
+  if(element === document.body){
+    element = document.documentElement;
+  }
+
+  element.setAttribute('data-sr-current', true);
+  element.focus();
+
+  announceElement(element);
 }

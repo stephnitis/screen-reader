@@ -4,7 +4,16 @@
 
 ### About
 
-This is a project dedicated to learning more about technology designed for accessibility. 
+This is a project dedicated to learning more about technology designed for accessibility.
+
+### Key terms
+
+- Focus: selecting an element and directing keyboard elements to that selected element
+  - critical, how users reach all the interactive controls in our application
+  - navigated via tab or tab-shift keys on keyboard
+- Tab-order is the order that elements are focused in the document
+  - inferred by the DOM ordering of your mark-up
+- Not all elements are focusable: non interactive elements
 
 ### Resources
 
