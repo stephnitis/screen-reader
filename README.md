@@ -26,8 +26,8 @@ This is a project dedicated to learning more about technology designed for acces
 #### Buttons
 
 - synthetic click activation: If you add a "click" handler to a button, it will run when the user presses ENTER or SPACE
-- If clicking on the element will perform an action on the page, use <button>.
-- If clicking on the element will navigate the user to a new page then use <a>. This includes single page web apps that load new content and update the URL using the History API.
+- If clicking on the element will perform an action on the page, use `<button>`.
+- If clicking on the element will navigate the user to a new page then use `<a>`. This includes single page web apps that load new content and update the URL using the History API.
 - The reason for this is that buttons and links are announced differently by screen readers. Using the correct element helps screen reader users know which outcome to expect.
 
 ### Resources
