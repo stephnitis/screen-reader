@@ -6,7 +6,9 @@
 
 This is a project dedicated to learning more about technology designed for accessibility.
 
-### Key terms
+### Key terms & notes
+
+#### Focus
 
 - Focus: selecting an element and directing keyboard elements to that selected element
   - critical, how users reach all the interactive controls in our application
@@ -20,7 +22,13 @@ This is a project dedicated to learning more about technology designed for acces
   - `tabindex="0"` item becomes programmatically focusable, thus we could call its focus method and it would direct focus to it, useful to direct a user to a specific control, possibly after they perform a specific action on the page
   - `tabindex="-1"` useful for managing focus, items are not interactive, but are focusable, possibly useful for disabling interactive controls
   - `tabindex="<value > 0>"` element will be jumped ahead of everything else in the tab order: not recommended
-- focus method
+
+#### Buttons
+
+- synthetic click activation: If you add a "click" handler to a button, it will run when the user presses ENTER or SPACE
+- If clicking on the element will perform an action on the page, use <button>.
+- If clicking on the element will navigate the user to a new page then use <a>. This includes single page web apps that load new content and update the URL using the History API.
+- The reason for this is that buttons and links are announced differently by screen readers. Using the correct element helps screen reader users know which outcome to expect.
 
 ### Resources
 
@@ -29,3 +37,4 @@ This is a project dedicated to learning more about technology designed for acces
 - [Voice driven web apps - Introduction to the Web Speech API](https://developer.chrome.com/blog/voice-driven-web-apps-introduction-to-the-web-speech-api/)
 - [How to Design Your Website for Screen Reader Accessibility](https://blog.hubspot.com/website/screen-reader-accessibility)
 - [A11ycasts with Rob Dodson](https://www.youtube.com/playlist?list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g)
+- [Inert Polyfill](https://github.com/WICG/inert)
