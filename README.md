@@ -23,6 +23,28 @@ This is a project dedicated to learning more about technology designed for acces
   - `tabindex="-1"` useful for managing focus, items are not interactive, but are focusable, possibly useful for disabling interactive controls
   - `tabindex="<value > 0>"` element will be jumped ahead of everything else in the tab order: not recommended
 
+#### Roving `tabindex` || Roving Focus
+
+- Treat complex controls, whenever possible, as a single Tab stop, so the user can tab into it use their arrow keys to interact with it if they like, or bypass by hitting tab key again
+- Define own HTML elements using the custom elements spec (allows you to create custom tags which inherit from native HTML element)
+
+``` javascript
+class RadioButton extends HTMLElement {
+  constructor(){
+    super();
+  }
+  // every custom element has a set of lifecycle callbacks that you can hook into to run your own code
+  // e.g. connectedCallback gets run every time our element is inserted into the DOM
+  // here we are setting up initial state
+  connectedCallback(){
+    this.setAttribute('role', 'radio');
+    this.setAttribute('tabindex', -1);
+    this.setAttribute('aria-checked', false);
+  }
+}
+window.customElements.define('radio-button', RadioButton);
+```
+
 #### Buttons
 
 - synthetic click activation: If you add a "click" handler to a button, it will run when the user presses ENTER or SPACE
@@ -32,6 +54,7 @@ This is a project dedicated to learning more about technology designed for acces
 
 ### Resources
 
+- [ARIA Authoring Practices Guide (APG)](https://www.w3.org/WAI/ARIA/apg/)
 - [Let’s create a screen reader!](https://medium.com/content-uneditable/lets-create-a-screen-reader-6734fe45aa3d)
 - [Accessibility Screen Readers](https://www.w3schools.com/accessibility/accessibility_screen_readers.php)
 - [Voice driven web apps - Introduction to the Web Speech API](https://developer.chrome.com/blog/voice-driven-web-apps-introduction-to-the-web-speech-api/)
