@@ -8,6 +8,29 @@ This is a project dedicated to learning more about technology designed for acces
 
 ### Key terms & notes
 
+#### Affordances
+
+- offer or afford a person the opportunity to perform an action
+- Offer affordances so non-sighted users can access our content
+
+#### How does Chrome communicate with a screen reader?
+
+- HTML gets parsed by browser and gets turned into the DOM (collection of JS objects)
+- DOM gets combined with CSS and gets transfered to the screen
+- Chrome makes another tree, the accessibility tree
+  - edits out things that aren't important e.g. divs
+  - keeps things like text, buttons
+  - This is the tree that the screen reader uses, and users rely on
+- Programmatic semantics
+- Can inspect accessibility tree
+- Implicit Semantics: similar to focus, native elements, get rich semantics for free
+- Landmarks: screen readers can quickly jump to these sections on the page
+- Most people report that when on unfamiliar website, they begin navigating by header in their screenreader
+  - This is why it is so important to not skip through from h1 to h4, use them in sequential order, that is how someone using a screenreader forms a mental outline of your page
+- web rotor: practice and see how people get around the document
+- Generic elements: generic semantics
+  - when we use generic elements and style them to act as a button, we mess up the semantics and non sighted users land on that item and cannot recognize that they can take action
+
 #### Focus
 
 - Focus: selecting an element and directing keyboard elements to that selected element
@@ -55,9 +78,11 @@ window.customElements.define('radio-button', RadioButton);
 ### Resources
 
 - [ARIA Authoring Practices Guide (APG)](https://www.w3.org/WAI/ARIA/apg/)
+- [WebAIM](https://webaim.org/)
 - [Let’s create a screen reader!](https://medium.com/content-uneditable/lets-create-a-screen-reader-6734fe45aa3d)
 - [Accessibility Screen Readers](https://www.w3schools.com/accessibility/accessibility_screen_readers.php)
 - [Voice driven web apps - Introduction to the Web Speech API](https://developer.chrome.com/blog/voice-driven-web-apps-introduction-to-the-web-speech-api/)
 - [How to Design Your Website for Screen Reader Accessibility](https://blog.hubspot.com/website/screen-reader-accessibility)
 - [A11ycasts with Rob Dodson](https://www.youtube.com/playlist?list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g)
 - [Inert Polyfill](https://github.com/WICG/inert)
+- [Accessibility Fundamentals with Rob Dodson](https://www.youtube.com/watch?v=z8xUCzToff8)
