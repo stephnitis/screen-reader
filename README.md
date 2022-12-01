@@ -21,7 +21,7 @@ This is a project dedicated to learning more about technology designed for acces
   - edits out things that aren't important e.g. divs
   - keeps things like text, buttons
   - This is the tree that the screen reader uses, and users rely on
-- Programmatic semantics
+- Programmatic semantics: The programmatic part consists of the data types and other attributes of the interface that can be enforced by the compiler. The semantic part of the interface consists of the assumptions about how the interface will be used, which cannot be enforced by the compiler.
 - Can inspect accessibility tree
 - Implicit Semantics: similar to focus, native elements, get rich semantics for free
 - Landmarks: screen readers can quickly jump to these sections on the page
